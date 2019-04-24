@@ -16,27 +16,21 @@ class Character():
         if self.health > 0:
             return True
 
+    def print_status(self):
+        print("The {} has {} health and {} power.".format(self.name, self.health, self.power))
+    
+    def attack(self, enemy):
+        enemy.health -= self.power
+
+
 class Hero(Character):
     def __init__(self, name, health, power):
         super().__init__(name, health, power)
-
-    def attack(self, enemy):
-        enemy.health -= self.power
-    
-    def print_status(self):
-        print("You have {} health and {} power.".format(self.health, self.power))
-
 
 
 class Goblin(Character):
     def __init__(self, name, health, power):
         super().__init__(name, health, power)
-    
-    def attack(self, hero):
-        hero.health -= self.power
-    
-    def print_status(self):
-        print("The goblin has {} health and {} power.".format(self.health, self.power))
 
 
 def main():
