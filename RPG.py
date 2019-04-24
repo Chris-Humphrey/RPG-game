@@ -6,7 +6,7 @@
 # 2. do nothing - in which case the goblin will attack him anyway
 # 3. flee
 
-class Character:
+class Character():
     def __init__(self, name, health, power):
         self.name = name
         self.health = health
@@ -15,6 +15,10 @@ class Character:
 class Hero(Character):
     def __init__(self, name, health, power):
         super().__init__(name, health, power)
+
+    def attack(self, enemy):
+        enemy.health -= self.power
+
 
 class Goblin(Character):
     def __init__(self, name, health, power):
@@ -37,7 +41,7 @@ def main():
         raw_input = input()
         if raw_input == "1":
             # Hero attacks goblin
-            enemy.health -= hero.power
+            hero.attack(enemy)
             print("You do {} damage to the goblin.".format(hero.power))
             if enemy.health <= 0:
                 print("The goblin is dead.")
