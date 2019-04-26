@@ -47,7 +47,16 @@ class Character():
             print(f"{self.name} dodged your attack.")
         else:
             enemy.health -= self.power
-
+    
+    # def block(self, enemy):
+    #     random20 = randint(1,5)
+    #     ## Option 2 is a 40% chance at blocking
+    #     if random20 <= 2:
+    #         print(f'{self.name} has blocked the attack.')
+    #         pass
+    #     else:
+    #         print(f"{self.name}'s block was unsuccessful")
+    #         enemy.health -= self.power
 
 class Hero(Character):
     def __init__(self, name, health, power, gold):
@@ -59,6 +68,37 @@ class Enemy(Character):
     def __init__(self, name, health, power, bounty):
         super().__init__(name, health, power)
         self.bounty = bounty
+
+class SuperTonic():
+    cost = 5
+    name = "Super Tonic"
+    
+    def apply(self, hero):
+        hero.health += 5
+        print(f"{hero.name}'s health has increased to {hero.health}'")
+
+class Armor():
+    cost = 5
+    name = "Heavy Armor"
+
+    def apply(self, hero):
+        
+
+class Store():
+    items = [superTonic, armor, sword]
+
+    def do_shopping(self, hero):
+        while True:
+            print("==============================")
+            print("Welcome to the general store!")
+            print("==============================")
+            print(f"You have {self.gold} gold.")
+            print("What would you like to buy?")
+            for s in range(len(Store.items)):
+                item = Store.items[s]
+                print(f"{s + 1}. {item.name} {item.cost} gold")
+                print("4. Leave")
+
 
 
 def heroSelection():
@@ -119,7 +159,7 @@ def main():
                 print(f"You have killed the {enemy.name}!")
                 print(f"You have found {enemy.bounty} gold.")
                 hero.gold += enemy.bounty
-                print(f"Backpack: {hero.gold} gold")
+                print(f"Wallet: {hero.gold} gold")
         elif raw_input == "2":
             pass
         elif raw_input == "3":
