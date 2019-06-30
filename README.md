@@ -28,7 +28,7 @@ You can battle enemies, do nothing or run-away.
 * Flee
 <p>This will take you to the menu.</p>
 
-*You have killed the enemy! Gold has been placed in your wallet to use in the store.</li>
+* You have killed the enemy! Gold has been placed in your wallet to use in the store.
 <img src ='images/fightEnd.png'>
 </ol>
 
