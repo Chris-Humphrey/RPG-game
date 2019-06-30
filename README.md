@@ -15,7 +15,7 @@ Here is the list of actions that the player can take. You can visit the store, b
 Super Tonic gives additional health. Heavy Armor will provide a shield. Long Sword gives bonus attack power.
 <img src ='images/shop.png' style="width:50%">
 
-<li>Battle<li>
+<li>Battle</li>
 <h4>Enemies are randomized (4 enemies types)</h4>
 <p>You can battle enemies, do nothing or run-away.</p>
 <img src ='images/enemy.png' width='400px'>
@@ -24,7 +24,7 @@ Super Tonic gives additional health. Heavy Armor will provide a shield. Long Swo
 <img src ='images/fightStart.png'>
 
 * Do nothing
-<p>The enemy will attack you.
+<p>The enemy will attack you.</p>
 
 * Flee
 <p>This will take you to the menu.</p>
