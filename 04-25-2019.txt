@@ -1,0 +1,30 @@
+Pool Table 4
+  start time 9:14
+  end time 9:15
+  duration 1 minutes
+  cost is $0.5
+Pool Table 1
+  start time 9:15
+  end time 9:15
+  duration 0 minutes
+  cost is $0.0
+Pool Table 2
+  start time 10:07
+  end time 9:15
+  duration -52 minutes
+  cost is $-26.0
+Pool Table 1
+  start time 10:12
+  end time 10:13
+  duration 1 minutes
+  cost is $0.5
+Pool Table 1
+  start time 10:28
+  end time 10:28
+  duration 0 minutes
+  cost is $0.0
+Pool Table 6
+  start time 10:39
+  end time 10:39
+  duration 0 minutes
+  cost is $0.0

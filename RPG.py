@@ -21,6 +21,7 @@ class Character():
 
     def print_status(self):
         print("The {} has {} health and {} power.".format(self.name, self.health, self.power))
+        print("--------------------------------------")
     
     def attack(self, enemy):
         random20 = randint(1,5)
@@ -44,7 +45,7 @@ class Character():
             print(f"{self.name} missed a shot.")
         elif enemy.name == "Shadow" and random10 <= 9:
             enemy.health += 0
-            print(f"{self.name} dodged your attack.")
+            print(f"{enemy.name} dodged your attack.")
         else:
             enemy.health -= self.power
     
@@ -59,7 +60,7 @@ class Character():
     #         enemy.health -= self.power
 
 class Hero(Character):
-    def __init__(self, name, health, power, gold):
+    def __init__(self, name, health, power, armor, gold):
         super().__init__(name, health, power)
         self.gold = gold
         self.backpack = []
@@ -74,7 +75,7 @@ class SuperTonic():
     name = "Super Tonic"
     
     def apply(self, hero):
-        hero.health += 5
+        hero.health += 10
         print(f"{hero.name}'s health has increased to {hero.health}'")
 
 class Armor():
@@ -82,38 +83,87 @@ class Armor():
     name = "Heavy Armor"
 
     def apply(self, hero):
-        
+        pass
+
+class Sword():
+    cost = 5
+    name = "Long Sword"
+
+    def apply(self, hero):
+        hero.power += 2
 
 class Store():
-    items = [superTonic, armor, sword]
+    items = [SuperTonic, Armor, Sword]
 
     def do_shopping(self, hero):
         while True:
-            print("==============================")
-            print("Welcome to the general store!")
-            print("==============================")
-            print(f"You have {self.gold} gold.")
-            print("What would you like to buy?")
+            print(f"""
+            ==============================
+            Welcome to the general store!
+            ==============================
+            You have {hero.gold} gold.
+            What would you like to buy?
+            """)
             for s in range(len(Store.items)):
                 item = Store.items[s]
                 print(f"{s + 1}. {item.name} {item.cost} gold")
-                print("4. Leave")
+            print("4. Leave")
+            selection = int(input(">> "))
+            if selection == 1:
+                SuperTonic().apply(hero)
+            elif selection == 2:
+                Armor().apply(hero)
+            elif selection == 3:
+                Sword().apply(hero)
+            elif selection == 4:
+                cont()
+            else:
+                print("That is not a valid option.")
 
 
+def cont():
+    selection = int(input("""
+    What would you like to do now?
+    1. Visit Store
+    2. Battle
+    3. Leave
+
+    >> """))
+    if selection == 1:
+        store = Store()
+        store.do_shopping(hero)
+    elif selection == 2:
+        battle()
+    elif selection == 3:
+        print("Goodbye.")
+        quit()
+    else:
+        print("That is not a valid option.")
 
 def heroSelection():
-    selection = int(input("Please choose your hero >> (1=Hero, 2=Medic, 3=Wizard, 4=Archer) >> "))
+    selection = int(input("""
+Please Choose Your Hero:
+
+          Hero    Health  Power   Armor   Gold 
+     -------------------------------------------
+    | 1.  Knight    12      5       0      10   |
+    | 2.  Medic      8      3       0      10   |
+    | 3.  Wizard     6      4       0      10   |
+    | 4.  Archer     5      6       0      10   |
+
+>> """))
+    print("")
     if selection == 1:
-        hero = Hero("Knight", 12, 5, 10)
+        hero = Hero("Knight", 12, 5, 0, 10)
     elif selection == 2:
-        hero = Hero("Medic", 8, 3, 10)
+        hero = Hero("Medic", 8, 3, 0, 10)
     elif selection == 3:
-        hero = Hero("Wizard", 6, 4, 10)
+        hero = Hero("Wizard", 6, 4, 0, 10)
     elif selection == 4:
-        hero = Hero("Archer", 5, 6, 10)
+        hero = Hero("Archer", 5, 6, 0, 10)
     else:
-        hero = Hero("Knight", 10, 5, 10)
-    
+        hero = Hero("Knight", 12, 5, 0, 10)
+    print("--------------------------------------")
     print(f"You have chosen the {hero.name}")
     
     return hero
@@ -128,21 +178,20 @@ def monsterRoll():
     elif roll >= 14 and roll < 18:
         enemy = Enemy("Shadow", 1, 1, 10)
     else:
-        enemy = Enemy("Ogre", 20, 3, 20)
-    
+        enemy = Enemy("Giant", 20, 3, 20)
+
+    print("--------------------------------------")
     print(f"A {enemy.name} has appeared!!")
+
     return enemy
 
-
-def main():
-    hero = heroSelection()
-    hero.print_status()
+def battle():
     enemy = monsterRoll()
     enemy.print_status()
 
     while enemy.alive() and hero.alive():
         print()
-        print("What do you want to do?")
+        print("What's your next move?")
         print(f"1. fight {enemy.name}")
         print("2. do nothing")
         print("3. flee")
@@ -151,20 +200,25 @@ def main():
         if raw_input == "1":
             # Hero attacks enemy
             hero.attack(enemy)
+            print("--------------------------------------")
             print("You do {} damage to the {}.".format(hero.power, enemy.name))
             enemy.print_status()
             if enemy.name == "Zombie":
                 print(f"You can't kill something that's already dead... RUN!")
+                print("--------------------------------------")
             elif enemy.health <= 0:
+                print("--------------------------------------")
                 print(f"You have killed the {enemy.name}!")
                 print(f"You have found {enemy.bounty} gold.")
                 hero.gold += enemy.bounty
                 print(f"Wallet: {hero.gold} gold")
+                print("--------------------------------------")
+                cont()
         elif raw_input == "2":
             pass
         elif raw_input == "3":
-            print("Goodbye.")
-            break
+            print("You run away...")
+            cont()
         else:
             print("Invalid input {}".format(raw_input))
 
@@ -175,5 +229,14 @@ def main():
             hero.print_status()
             if hero.health <= 0:
                 print("You are dead.")
+                main()
 
-main()
+
+def main():
+    hero = heroSelection()
+    hero.print_status()
+    return hero
+
+hero = main()
+
+cont()
