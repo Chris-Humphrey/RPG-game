@@ -6,12 +6,17 @@ This is a terminal based RPG Game programed in Python 3. I made this game in Wee
 <img src ='images/heroSelection.png'>
 
 ## Actions
-Here is the list of actions that the player can take. You can battle enemies, do nothing or run-away.
+Here is the list of actions that the player can take. You can visit the store, battle or leave the game.
 <img src ='images/choice.png'>
 
-<h4>Enemies are randomized (4 enemies types)</h4>
-<img src ='images/enemy.png' width='400px'>
+<li>Visit the store.</li>
+<p>You can purchase items to use in battle.</p>
+Super Tonic gives additional health. Heavy Armor will provide a shield. Long Sword gives bonus attack power.
+<img src ='images/shop.png' style="width:50%">
 
+<h4>Enemies are randomized (4 enemies types)</h4>
+You can battle enemies, do nothing or run-away.
+<img src ='images/enemy.png' width='400px'>
 <ol>
 <li>Battle</li>
 <img src ='images/fightStart.png'>
@@ -24,11 +29,7 @@ Here is the list of actions that the player can take. You can battle enemies, do
 
 <li>You have killed the enemy! Gold has been placed in your wallet to use in the store.</li>
 <img src ='images/fightEnd.png'>
-
-<li>Go to the store.</li>
-<p>You can purchase items to use in battle.</p>
-Super Tonic gives additional health. Heavy Armor will provide a shield. Long Sword gives bonus attack power.
-<img src ='images/shop.png' style="width:50%">
+</ol>
 
 ## How to play
 <ol>
