@@ -4,6 +4,7 @@ This is a terminal based RPG Game programed in Python 3. I made this game in Wee
 ## Characters
 <h4>Select your hero (4 hero types)</h4>
 <img src ='images/heroSelection.png'>
+
 ---
 
 ## Actions
