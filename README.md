@@ -27,12 +27,9 @@ Here is the list of actions that the player can take. You can battle enemies, do
 
 <li>Go to the store.</li>
 <p>You can purchase items to use in battle.</p>
+Super Tonic gives additional health. Heavy Armor will provide a shield. Long Sword gives bonus attack power.
 <img src ='images/shop.png' style="width:50%">
 
-<li>go to gem mountain</li>
-<p>You can play "Guess a number" game to earn 5 points if you are lucky :)</p>
-<img src ='images/gems.png'>
-</ol>
 ## How to play
 <ol>
 <li>If you don't have python3 (If you have Python3, skip this.)
@@ -42,7 +39,7 @@ https://www.python.org/downloads/
 <p>Make sure your dependencies are all there</p>
 
 <li>Clone this repo to your local machine.</li>
-https://github.com/hirosoft40/RPGgame.git
+https://github.com/Chris-Humphrey/RPG-game
 
 <li>Open Terminal and play!</li>
 </ol>
@@ -62,14 +59,4 @@ I have implemented few things so that a game beginner like myself can enjoy also
 <img src ='images/face.png' width='70%'>
 
 <h3><li> Error Handlings </li></h3>
-<p>This game prompt user inputs. Therefore I spent more time on coding error handling.</p>
-
-</ol>
-
-## My Challenge
-I am not a game person. So my biggest challenge was to learn more about how RPG game works. I interviewed few family members and then I was able to come up with specifications. 
-<br>
-The other challenge was to understand Class. I was introduced to Class first time, and it took me some time to fully understand thought the concept seemed clear. The best way to learn is to code. So I coded, did some research and coded again.
-
-## After coding
-I enjoyed coding python3 and I enjoyed this project. As I code and implemented anime style emotions, error handling and other features, I am happy on how it turned.
+<p>This game prompts user inputs, therefore, I have made sure to optimize error handling.</p>
