@@ -5,12 +5,12 @@ This is a terminal based RPG Game programed in Python 3. I made this game in Wee
 <h4>Select your hero (4 hero types)</h4>
 <img src ='images/heroSelection.png'>
 
-<h4>Enemies are randomized (4 enemies types)</h4>
-<img src ='images/enemy.png' width='400px'>
-
 ## Actions
 Here is the list of actions that the player can take. You can battle enemies, do nothing or run-away.
 <img src ='images/choice.png'>
+
+<h4>Enemies are randomized (4 enemies types)</h4>
+<img src ='images/enemy.png' width='400px'>
 
 <ol>
 <li>Battle</li>
