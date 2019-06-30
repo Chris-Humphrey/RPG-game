@@ -11,7 +11,7 @@ Here is the list of actions that the player can take. You can visit the store, b
 
 <ol>
 <li>Visit the store.</li>
-<p>You can purchase items to use in battle.</p>
+<h4>You can purchase items to use in battle.</h4>
 Super Tonic gives additional health. Heavy Armor will provide a shield. Long Sword gives bonus attack power.
 <img src ='images/shop.png' style="width:50%">
 
@@ -29,7 +29,8 @@ Super Tonic gives additional health. Heavy Armor will provide a shield. Long Swo
 * Flee
 <p>This will take you to the menu.</p>
 
-* You have killed the enemy! Gold has been placed in your wallet to use in the store.
+<li>You have killed the enemy!</li>
+<p>Gold has been placed in your wallet to use in the store.</p>
 <img src ='images/fightEnd.png'>
 </ol>
 
