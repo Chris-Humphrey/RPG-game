@@ -16,7 +16,7 @@ Super Tonic gives additional health. Heavy Armor will provide a shield. Long Swo
 <img src ='images/shop.png' style="width:50%">
 
 <h4>Enemies are randomized (4 enemies types)</h4>
-You can battle enemies, do nothing or run-away.
+<p>You can battle enemies, do nothing or run-away.</p>
 <img src ='images/enemy.png' width='400px'>
 
 <li>Battle<li>
