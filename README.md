@@ -54,17 +54,3 @@ https://github.com/Chris-Humphrey/RPG-game
 
 ## Language
 <ul><li> Python3 </li></ul>
-
-
-## Features
-I have implemented few things so that a game beginner like myself can enjoy also.
-<ol>
-<h3><li> Gem Mountain</li></h3>
-<p>Users mind changes. Sometimes they want to play games, sometimes they are tired of attacking. So, I have created gem Mountain to play a very simple game. </p>
-
-<h3><li> Anime style emotions </li></h3>
-<p>I have added Anime style emotions so that users can enjoy more without reading letters.</p>
-<img src ='images/face.png' width='70%'>
-
-<h3><li> Error Handlings </li></h3>
-<p>This game prompts user inputs, therefore, I have made sure to optimize error handling.</p>
